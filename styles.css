@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+:root {
+  /* Font */
+  --main-font: "Roboto", sans-serif;
+  /*Font weight*/
+  --bold-text: 600;
+  /* Colors */
+  --primary-color: #e28525;
+  --secondary-color: #016972;
+  --third-color: #00403f;
+  /* Border radius */
+  --border-radius: 0.7rem;
+  --border-radius-lg: 1.5rem;
+  /* Margins */
+  --margin: 2rem;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: var(--main-font);
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+}
+
+h3 {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+/*Utility classes*/
+.bg-primary {
+  background-color: var(--primary-color);
+}
+
+.bg-secondary {
+  background-color: var(--secondary-color);
+}
+
+.bg-third {
+  background-color: var(--third-color);
+}
+
+.text-white {
+  color: #fff;
+}
+
+.color-primary {
+  color: var(--primary-color);
+}
+
+.color-secondary {
+  color: var(--secondary-color);
+}
+
+.color-third {
+  color: var(--third-color);
+}
+
+.bold {
+  font-weight: var(--bold-text);
+}
+
+.is-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: min(95%, 70rem);
+  margin-inline: auto;
+  padding: 1rem;
+}
+
+.is-grid > article {
+  padding: 2rem;
+}
+
+.is-vertical-grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.btn-primary {
+  background-color: #fff;
+  border-radius: var(--border-radius-lg);
+  padding: 0.5rem 1rem;
+  border: 1px solid #fff;
+}
+
+.btn-primary:active {
+  background-color: transparent;
+  color: #fff;
+}
+
+.md-transparent {
+  opacity: 0.8;
+}
+
+@media screen and (min-width: 765px) {
+  .is-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: min(95%, 70rem);
+    min-height: 32rem;
+    margin-inline: auto;
+    padding: 1rem;
+  }
+  .is-grid button {
+    margin-top: var(--margin);
+  }
+}
+
+/* Attribution */
+.attribution {
+  font-family: var(--main-font);
+  font-size: 0.8rem;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.attribution a:hover {
+  color: hsl(228, 62%, 24%);
+}
