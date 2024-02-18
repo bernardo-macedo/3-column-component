@@ -82,10 +82,19 @@ a {
   width: min(95%, 60rem);
   margin-inline: auto;
   padding: 1rem;
+  border-radius: var(--border-radius);
 }
 
 .is-grid > article {
   padding: 2rem;
+}
+
+.is-grid > article:first-child {
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+
+.is-grid > article:last-child {
+  border-radius: 0 0 var(--border-radius) var(--border-radius);
 }
 
 @media screen and (min-width: 765px) {
@@ -93,6 +102,12 @@ a {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     min-height: 32rem;
+  }
+  .is-grid > article:first-child {
+    border-radius: var(--border-radius) 0 0 var(--border-radius);
+  }
+  .is-grid > article:last-child {
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
   }
   .is-grid button {
     margin-top: var(--margin);
